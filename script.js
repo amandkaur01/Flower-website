@@ -65,6 +65,81 @@ document.getElementById("login-btn").onclick = (e) => {
   loginForm.classList.toggle("active");
 };
 
+const signupLink = document.getElementById("signup-link"); 
+const signupPopup = document.getElementById("signup-popup");
+const closeSignup = document.getElementById("close-signup");
+const backToLogin = document.getElementById("back-to-login");
+
+if (signupLink) {
+  signupLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    signupPopup.style.display = "flex"; 
+  });
+}
+
+if (closeSignup) {
+  closeSignup.addEventListener("click", () => {
+    signupPopup.style.display = "none";
+  });
+}
+
+if (backToLogin) {
+  backToLogin.addEventListener("click", (e) => {
+    e.preventDefault();
+    signupPopup.style.display = "none";
+    loginForm.classList.add("active"); 
+  });
+}
+
+const signupForm = document.getElementById("signup-form");
+if (signupForm) {
+  signupForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    alert("Registration successful! You can now log in.");
+    signupPopup.style.display = "none";
+  });
+}
+
+const forgotLink = document.querySelector(".login-form a[href='#forgot']");
+const forgotPopup = document.getElementById("forgot-popup");
+const closeForgot = document.getElementById("close-forgot");
+const forgotBackLogin = document.getElementById("forgot-back-login");
+
+if (forgotLink) {
+  forgotLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    forgotPopup.style.display = "flex";
+  });
+}
+
+if (closeForgot) {
+  closeForgot.addEventListener("click", () => {
+    forgotPopup.style.display = "none";
+  });
+}
+
+if (forgotBackLogin) {
+  forgotBackLogin.addEventListener("click", (e) => {
+    e.preventDefault();
+    forgotPopup.style.display = "none";
+    loginForm.classList.add("active");
+  });
+}
+
+const forgotForm = document.getElementById("forgot-form");
+if (forgotForm) {
+  forgotForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const email = document.getElementById("reset-email").value;
+    alert(`A reset link has been sent to ${email}`);
+    forgotPopup.style.display = "none";
+  });
+}
+
+
+
+
+
 
 
 

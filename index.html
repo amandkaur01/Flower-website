@@ -29,10 +29,36 @@
             <h3>Login</h3>
             <input type="email" placeholder="Email" class="box">
             <input type="password" placeholder="Password" class="box">
-            <p>forgot your password<a href="#">click here</a></p>
-            <p>Don't have an account? <a href="#">Sign Up</a></p>
+            <p>forgot your password<a href="#forgot">click here</a></p>
+            <p>Don't have an account? <a href="#signup" id="signup-link">Sign Up</a></p>
             <input type="submit" value="Login" class="btn">
         </form>
+             <!-- Signup Popup -->
+        <div class="signup-popup" id="signup-popup">
+            <div class="signup-content">
+            <h2>Create Account</h2>
+            <form id="signup-form">
+                <input type="text" placeholder="Full Name" required><br>
+                <input type="email" placeholder="Email" required><br>
+                <input type="password" placeholder="Password" required><br>
+                <button type="submit">Register</button>
+            </form>
+            <p>Already have an account? <a href="#" id="back-to-login">Login</a></p>
+            <button id="close-signup" class="close-btn">x</button>
+            </div>
+        </div> 
+        <!-- Forgot Password Popup -->
+        <div class="forgot-popup" id="forgot-popup">
+            <div class="forgot-content">
+            <button id="close-forgot" class="close-btn">x</button>
+            <h2>Reset Password</h2>
+            <form id="forgot-form">
+               <input type="email" id="reset-email" placeholder="Enter your registered email" required><br>
+               <button type="submit">Send Reset Link</button>
+            </form>
+            <p>Back to <a href="#" id="forgot-back-login">Login</a></p>
+            </div>
+        </div>
 
     </header>
 <section class="home" id="home">
@@ -40,7 +66,7 @@
         <h3>Fresh Flowers</h3>
         <span>Natural & beautiful flowers</span>
         <p>Discover the beauty of nature with our exquisite collection of fresh flowers.From vibrant bouquets to elegant arrangements, we have something for every occasion.</p>
-        <a href="#" class="btn">Shop Now</a>
+        <a href="#products" class="btn">Shop Now</a>
     </div>
 </section>
 
@@ -56,10 +82,48 @@
             <p>We are dedicated to providing the freshest and most beautiful flowers. Our team of experts ensures that every bouquet is crafted with care and precision.</p>
             <p>With a wide variety of flowers, we cater to all your floral needs,  more than just gifts—they are expressions of love, joy, and celebration.</p>
         <p>Whether you need a custom arrangement for a special event or simply want to brighten someone’s day, our team is here to help. Experience the difference with our personalized service and attention to detail.</p>
-        <a href="#" class="btn">Learn More</a>
+        <a href="#gallery" class="btn">Learn More</a>
         </div>
     </div>
 </section>
+
+<section id="gallery" class="gallery-section">
+  <div class="container">
+    <h2 class="section-title">Event Decorations & Inspirations</h2>
+    <p class="section-subtitle">Explore our creative event setups and decorations.</p>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="decor1.jpg" alt="Decoration 1">
+        <div class="overlay">
+          <h3>Elegant Wedding</h3>
+          <p>Romantic floral setup for a wedding ceremony.</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="decor2.jpg" alt="Decoration 2">
+        <div class="overlay">
+          <h3>Birthday Bash</h3>
+          <p>Colorful decorations and balloons for kids.</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="decor3.jpg" alt="Decoration 3">
+        <div class="overlay">
+          <h3>Corporate Event</h3>
+          <p>Professional theme with branded elements.</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="decor4.jpg" alt="Decoration 4">
+        <div class="overlay">
+          <h3>Festive Gala</h3>
+          <p>Traditional decorations with vibrant colors.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <section class="icons-container">
     <div class="icons">
